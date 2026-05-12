@@ -26,7 +26,7 @@ Neither signal alone is sufficient. A restaurant can have stunning food photos b
 ---
 
 ## 2. Dataset & EDA
-
+ 
 ### Datasets
 
 | Dataset | Source | Size | Task |
