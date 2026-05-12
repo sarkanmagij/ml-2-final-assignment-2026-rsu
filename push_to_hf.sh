@@ -12,7 +12,7 @@ echo "==> Creating Space: $REPO"
 python3 -c "
 from huggingface_hub import HfApi
 api = HfApi()
-api.create_repo('$SPACE_NAME', repo_type='space', space_sdk='streamlit', exist_ok=True)
+api.create_repo('$SPACE_NAME', repo_type='space', space_sdk='docker', exist_ok=True)
 print('Space ready.')
 "
 
@@ -31,6 +31,7 @@ echo "==> Copying app files"
 PROJECT_DIR="$(dirname "$0")"
 cp "$PROJECT_DIR/app.py" .
 cp "$PROJECT_DIR/requirements.txt" .
+cp "$PROJECT_DIR/Dockerfile" .
 cp "$PROJECT_DIR/HF_README.md" README.md
 cp -r "$PROJECT_DIR/demo_photos" .
 cp -r "$PROJECT_DIR/models" .
